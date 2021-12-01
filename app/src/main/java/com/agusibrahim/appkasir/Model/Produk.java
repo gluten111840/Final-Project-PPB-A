@@ -1,7 +1,5 @@
 package com.agusibrahim.appkasir.Model;
 import java.util.*;
-
-import android.annotation.SuppressLint;
 import android.database.*;
 import com.agusibrahim.appkasir.*;
 import android.content.*;
@@ -55,10 +53,10 @@ public class Produk
 		if(cur.getCount()<1){
 			return null;
 		}
-		@SuppressLint("Range") String nama=cur.getString(cur.getColumnIndex("nama"));
-		@SuppressLint("Range") String sn=cur.getString(cur.getColumnIndex("sn"));
-		@SuppressLint("Range") long harga=cur.getLong(cur.getColumnIndex("harga"));
-		@SuppressLint("Range") int stok=cur.getInt(cur.getColumnIndex("stok"));
+		String nama=cur.getString(cur.getColumnIndex("nama"));
+		String sn=cur.getString(cur.getColumnIndex("sn"));
+		long harga=cur.getLong(cur.getColumnIndex("harga"));
+		int stok=cur.getInt(cur.getColumnIndex("stok"));
 		return new Produk(nama, sn, harga, stok);
 	}
 	public static ArrayList<Produk> getInit(Context ctx){
@@ -67,10 +65,10 @@ public class Produk
 		cur.moveToFirst();
 		for(int i=0;i<cur.getCount();i++){
 			cur.moveToPosition(i);
-			@SuppressLint("Range") String nama=cur.getString(cur.getColumnIndex("nama"));
-			@SuppressLint("Range") String sn=cur.getString(cur.getColumnIndex("sn"));
-			@SuppressLint("Range") long harga=cur.getLong(cur.getColumnIndex("harga"));
-			@SuppressLint("Range") int stok=cur.getInt(cur.getColumnIndex("stok"));
+			String nama=cur.getString(cur.getColumnIndex("nama"));
+			String sn=cur.getString(cur.getColumnIndex("sn"));
+			long harga=cur.getLong(cur.getColumnIndex("harga"));
+			int stok=cur.getInt(cur.getColumnIndex("stok"));
 			prod.add(new Produk(nama, sn, harga, stok));
 		}
 		return prod;

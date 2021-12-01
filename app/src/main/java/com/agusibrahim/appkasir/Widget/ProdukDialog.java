@@ -1,6 +1,6 @@
 package com.agusibrahim.appkasir.Widget;
-import android.app.AlertDialog;
 import android.content.*;
+import android.support.v7.app.*;
 import android.view.*;
 import android.widget.*;
 import com.agusibrahim.appkasir.Model.*;

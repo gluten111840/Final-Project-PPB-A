@@ -1,29 +1,24 @@
 package com.agusibrahim.appkasir;
-
-import android.Manifest;
-import android.app.AlertDialog;
-import android.app.Fragment;
-import android.content.DialogInterface;
-import android.content.res.Configuration;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import androidx.appcompat.widget.Toolbar;
-
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.FragmentManager;
-
-import com.agusibrahim.appkasir.Adapter.BelanjaanDataAdapter;
-import com.agusibrahim.appkasir.Adapter.ProdukDataAdapter;
-import com.agusibrahim.appkasir.Fragment.belanjaFragment;
-import com.agusibrahim.appkasir.Fragment.productFragment;
+import android.app.*;
+import android.os.*;
+import android.support.v7.app.*;
+import android.support.v4.widget.*;
+import android.support.v7.widget.*;
+import android.support.design.widget.*;
+import android.view.*;
+import android.support.v4.view.*;
+import android.widget.Toast;
+import android.content.res.*;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import com.agusibrahim.appkasir.Fragment.*;
 import com.agusibrahim.appkasir.Model.Produk;
-import com.google.android.material.navigation.NavigationView;
-
+import java.util.*;
+import com.agusibrahim.appkasir.Adapter.*;
 import kr.co.namee.permissiongen.*;
+import android.*;
+import android.support.v7.app.AlertDialog;
+import android.content.*;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -146,7 +141,6 @@ public class MainActivity extends AppCompatActivity
 	}
 	@Override public void onRequestPermissionsResult(int requestCode, String[] permissions,
 													 int[] grantResults) {
-		super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 		PermissionGen.onRequestPermissionsResult(this, requestCode, permissions, grantResults);
 	}
 	@Override

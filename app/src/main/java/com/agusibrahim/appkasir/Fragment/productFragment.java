@@ -16,14 +16,9 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
 import com.agusibrahim.appkasir.MainActivity;
 import android.support.design.widget.*;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.kennyc.bottomsheet.*;
 import com.agusibrahim.appkasir.R;
 import android.content.*;
-
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-
 import com.agusibrahim.appkasir.*;
 import com.agusibrahim.appkasir.Widget.*;
 

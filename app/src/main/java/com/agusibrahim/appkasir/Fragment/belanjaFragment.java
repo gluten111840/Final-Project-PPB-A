@@ -13,11 +13,7 @@ import android.widget.*;
 import com.agusibrahim.appkasir.Widget.*;
 import de.codecrafters.tableview.listeners.*;
 import com.agusibrahim.appkasir.Model.*;
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
-
 import android.support.v7.app.AlertDialog;
-
-import androidx.fragment.app.Fragment;
 
 public class belanjaFragment extends Fragment
 {
