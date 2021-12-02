@@ -6,7 +6,7 @@
 	android:layout_height="fill_parent"
 	android:id="@+id/kor">
 
-	<com.agusibrahim.appkasir.tabelBelanjaan
+	<com.ppb.appkasir.tabelBelanjaan
 		xmlns:table="http://schemas.android.com/apk/res-auto"
 		android:id="@+id/belanjaan"
 		android:layout_width="match_parent"

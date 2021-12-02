@@ -1,14 +1,15 @@
-package com.agusibrahim.appkasir.Widget;
+package com.ppb.appkasir.Widget;
 import android.content.*;
 import com.agusibrahim.appkasir.*;
 import android.view.*;
 import android.widget.*;
-import com.agusibrahim.appkasir.Adapter.*;
+import com.ppb.appkasir.Adapter.*;
 import android.support.v7.app.*;
-import android.support.v4.app.*;
-import android.app.Dialog;
-import android.os.*;
-import com.agusibrahim.appkasir.Model.*;
+import com.agusibrahim.appkasir.R;
+import com.ppb.appkasir.Model.*;
+import com.ppb.appkasir.Adapter.BelanjaanDataAdapter;
+import com.ppb.appkasir.MainActivity;
+import com.ppb.appkasir.Model.Belanjaan;
 
 public class EditorDialog
 {
@@ -27,7 +28,7 @@ public class EditorDialog
 				@Override
 				public void onClick(DialogInterface p1, int p2) {
 					MainActivity.dataBalanjaan.tambah(bel.getProduk(), num.getValue());
-					totalbelanja.setText("Rp. "+BelanjaanDataAdapter.PRICE_FORMATTER.format(BelanjaanDataAdapter.total));
+					totalbelanja.setText("Rp. "+ BelanjaanDataAdapter.PRICE_FORMATTER.format(BelanjaanDataAdapter.total));
 				}
 			});
 		dlg.setNeutralButton("Hapus Belanjaan", null);

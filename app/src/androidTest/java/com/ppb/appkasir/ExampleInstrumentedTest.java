@@ -1,4 +1,4 @@
-package com.agusibrahim.appkasir;
+package com.ppb.appkasir;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

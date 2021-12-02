@@ -1,4 +1,4 @@
-package com.agusibrahim.appkasir;
+package com.ppb.appkasir;
 import android.database.sqlite.*;
 import android.content.*;
 import android.database.*;

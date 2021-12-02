@@ -32,7 +32,7 @@
 			android:layout_marginLeft="10dp"
 			android:textSize="50sp"/>
 
-		<com.agusibrahim.appkasir.Widget.NumPik
+		<com.ppb.appkasir.Widget.NumPik
 			android:layout_height="wrap_content"
 			android:layout_toRightOf="@id/kali"
 			android:layout_width="wrap_content"

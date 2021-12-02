@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AppKasir-androidstudio-master.iml" filepath="$PROJECT_DIR$/.idea/modules/AppKasir-androidstudio-master.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AppKasir-androidstudio-master.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AppKasir-androidstudio-master.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Final-Project-PPB-A.iml" filepath="$PROJECT_DIR$/.idea/modules/Final-Project-PPB-A.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Final-Project-PPB-A.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Final-Project-PPB-A.app.iml" />
     </modules>
   </component>
 </project>

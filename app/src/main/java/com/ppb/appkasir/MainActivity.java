@@ -1,5 +1,4 @@
-package com.agusibrahim.appkasir;
-import android.app.*;
+package com.ppb.appkasir;
 import android.os.*;
 import android.support.v7.app.*;
 import android.support.v4.widget.*;
@@ -7,14 +6,18 @@ import android.support.v7.widget.*;
 import android.support.design.widget.*;
 import android.view.*;
 import android.support.v4.view.*;
-import android.widget.Toast;
 import android.content.res.*;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import com.agusibrahim.appkasir.Fragment.*;
-import com.agusibrahim.appkasir.Model.Produk;
-import java.util.*;
-import com.agusibrahim.appkasir.Adapter.*;
+import com.ppb.appkasir.Fragment.*;
+import com.ppb.appkasir.Adapter.BelanjaanDataAdapter;
+import com.ppb.appkasir.Adapter.ProdukDataAdapter;
+import com.ppb.appkasir.Fragment.belanjaFragment;
+import com.ppb.appkasir.Fragment.productFragment;
+import com.ppb.appkasir.Model.Produk;
+import com.ppb.appkasir.Adapter.*;
+import com.agusibrahim.appkasir.R;
+
 import kr.co.namee.permissiongen.*;
 import android.*;
 import android.support.v7.app.AlertDialog;
@@ -76,7 +79,7 @@ public class MainActivity extends AppCompatActivity
 				fragclass = belanjaFragment.class;
 				break;
 			case R.id.frag2:
-				fragclass=productFragment.class;
+				fragclass= productFragment.class;
 				break;
 			default:
 				fragclass=belanjaFragment.class;

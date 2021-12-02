@@ -1,12 +1,14 @@
-package com.agusibrahim.appkasir.Adapter;
+package com.ppb.appkasir.Adapter;
 import de.codecrafters.tableview.*;
 import android.view.*;
 import java.util.*;
-import com.agusibrahim.appkasir.Model.*;
+import com.ppb.appkasir.Model.*;
 import android.content.*;
 import android.widget.*;
 import java.text.*;
-import com.agusibrahim.appkasir.*;
+
+import com.ppb.appkasir.DBHelper;
+import com.ppb.appkasir.Model.Produk;
 
 public class ProdukDataAdapter extends TableDataAdapter
 {

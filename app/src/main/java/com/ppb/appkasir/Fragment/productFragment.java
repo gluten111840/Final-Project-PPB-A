@@ -1,26 +1,23 @@
-package com.agusibrahim.appkasir.Fragment;
+package com.ppb.appkasir.Fragment;
 
-import android.app.*;
 import android.os.*;
-import android.support.v7.app.AppCompatActivity;
-import de.codecrafters.tableview.*;
-import de.codecrafters.tableview.toolkit.*;
-import com.agusibrahim.appkasir.Adapter.ProdukDataAdapter;
-import com.agusibrahim.appkasir.Model.Produk;
-import java.util.*;
+
+import com.ppb.appkasir.Adapter.ProdukDataAdapter;
+import com.ppb.appkasir.Model.Produk;
+
 import de.codecrafters.tableview.listeners.*;
 import android.widget.*;
-import android.support.v4.content.*;
 import android.view.*;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
-import com.agusibrahim.appkasir.MainActivity;
+
+import com.ppb.appkasir.MainActivity;
 import android.support.design.widget.*;
 import com.kennyc.bottomsheet.*;
 import com.agusibrahim.appkasir.R;
-import android.content.*;
-import com.agusibrahim.appkasir.*;
-import com.agusibrahim.appkasir.Widget.*;
+import com.ppb.appkasir.Widget.*;
+import com.ppb.appkasir.TableGue;
+import com.ppb.appkasir.Widget.ProdukDialog;
+import com.ppb.appkasir.Widget.inputProdukScanner;
 
 public class productFragment extends Fragment 
 {

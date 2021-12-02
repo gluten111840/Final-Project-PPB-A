@@ -1,19 +1,22 @@
-package com.agusibrahim.appkasir.Fragment;
+package com.ppb.appkasir.Fragment;
 import android.support.v4.app.*;
 import android.os.*;
 import android.view.*;
-import com.agusibrahim.appkasir.*;
-import com.agusibrahim.appkasir.Adapter.*;
-import de.codecrafters.tableview.toolkit.*;
-import java.util.*;
-import com.agusibrahim.appkasir.Model.Produk;
+import com.ppb.appkasir.*;
+import com.ppb.appkasir.Adapter.*;
+import com.agusibrahim.appkasir.R;
+import com.ppb.appkasir.Adapter.BelanjaanDataAdapter;
+
 import android.support.design.widget.*;
-import android.text.*;
 import android.widget.*;
-import com.agusibrahim.appkasir.Widget.*;
+import com.ppb.appkasir.Widget.*;
 import de.codecrafters.tableview.listeners.*;
-import com.agusibrahim.appkasir.Model.*;
-import android.support.v7.app.AlertDialog;
+import com.ppb.appkasir.Model.*;
+import com.ppb.appkasir.MainActivity;
+import com.ppb.appkasir.Model.Belanjaan;
+import com.ppb.appkasir.Widget.EditorDialog;
+import com.ppb.appkasir.Widget.inputProdukScanner;
+import com.ppb.appkasir.tabelBelanjaan;
 
 public class belanjaFragment extends Fragment
 {

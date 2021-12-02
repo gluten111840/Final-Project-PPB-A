@@ -1,4 +1,4 @@
-package com.agusibrahim.appkasir.Model;
+package com.ppb.appkasir.Model;
 
 public class Belanjaan
 {

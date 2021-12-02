@@ -1,7 +1,9 @@
-package com.agusibrahim.appkasir.Model;
+package com.ppb.appkasir.Model;
 import java.util.*;
 import android.database.*;
-import com.agusibrahim.appkasir.*;
+
+import com.ppb.appkasir.DBHelper;
+
 import android.content.*;
 
 public class Produk
