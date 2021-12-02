@@ -1,7 +1,7 @@
 package com.ppb.appkasir;
 import de.codecrafters.tableview.*;
-import com.ppb.appkasir.Model.*;
-import com.agusibrahim.appkasir.R;
+
+import com.ppb.appkasir.R;
 import com.ppb.appkasir.Model.Belanjaan;
 
 import android.content.*;
@@ -23,8 +23,8 @@ public class tabelBelanjaan extends SortableTableView<Belanjaan>
         super(context, attributes, styleAttributes);
 		setColumnCount(3);
 		SimpleTableHeaderAdapter simpleTableHeaderAdapter = new SimpleTableHeaderAdapter(context, "Produk", "Harga", "Quantity");
-		simpleTableHeaderAdapter.setTextColor(ContextCompat.getColor(context, com.agusibrahim.appkasir.R.color.table_header_text));
-		final int rowColorEven = ContextCompat.getColor(context, com.agusibrahim.appkasir.R.color.table_data_row_even);
+		simpleTableHeaderAdapter.setTextColor(ContextCompat.getColor(context, com.ppb.appkasir.R.color.table_header_text));
+		final int rowColorEven = ContextCompat.getColor(context, com.ppb.appkasir.R.color.table_data_row_even);
         final int rowColorOdd = ContextCompat.getColor(context, R.color.table_data_row_odd);
         setDataRowBackgroundProvider(TableDataRowBackgroundProviders.alternatingRowColors(rowColorEven, rowColorOdd));
         setHeaderSortStateViewProvider(SortStateViewProviders.brightArrows());

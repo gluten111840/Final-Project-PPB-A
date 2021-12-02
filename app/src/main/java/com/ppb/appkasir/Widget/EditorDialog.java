@@ -1,12 +1,9 @@
 package com.ppb.appkasir.Widget;
 import android.content.*;
-import com.agusibrahim.appkasir.*;
 import android.view.*;
 import android.widget.*;
-import com.ppb.appkasir.Adapter.*;
 import android.support.v7.app.*;
-import com.agusibrahim.appkasir.R;
-import com.ppb.appkasir.Model.*;
+import com.ppb.appkasir.R;
 import com.ppb.appkasir.Adapter.BelanjaanDataAdapter;
 import com.ppb.appkasir.MainActivity;
 import com.ppb.appkasir.Model.Belanjaan;

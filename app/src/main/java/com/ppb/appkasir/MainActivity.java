@@ -9,14 +9,13 @@ import android.support.v4.view.*;
 import android.content.res.*;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import com.ppb.appkasir.Fragment.*;
+
 import com.ppb.appkasir.Adapter.BelanjaanDataAdapter;
 import com.ppb.appkasir.Adapter.ProdukDataAdapter;
 import com.ppb.appkasir.Fragment.belanjaFragment;
 import com.ppb.appkasir.Fragment.productFragment;
 import com.ppb.appkasir.Model.Produk;
-import com.ppb.appkasir.Adapter.*;
-import com.agusibrahim.appkasir.R;
+import com.ppb.appkasir.R;
 
 import kr.co.namee.permissiongen.*;
 import android.*;

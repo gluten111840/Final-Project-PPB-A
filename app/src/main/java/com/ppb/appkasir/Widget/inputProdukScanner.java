@@ -7,17 +7,14 @@ import android.view.inputmethod.*;
 import java.util.*;
 import com.google.zxing.*;
 import android.text.*;
-import com.ppb.appkasir.Model.*;
 import android.support.v7.app.AlertDialog;
-import com.ppb.appkasir.Adapter.*;
 import android.os.*;
-import com.ppb.appkasir.Fragment.*;
-import com.ppb.appkasir.*;
+
 import com.ppb.appkasir.Adapter.BelanjaanDataAdapter;
 import com.ppb.appkasir.Fragment.belanjaFragment;
 import com.ppb.appkasir.MainActivity;
 import com.ppb.appkasir.Model.Produk;
-import com.agusibrahim.appkasir.R;
+import com.ppb.appkasir.R;
 public class inputProdukScanner {
 	Context ctx;
 	DecoratedBarcodeView barcodeView;

@@ -1,4 +1,4 @@
-package com.agusibrahim.appkasir;
+package com.ppb.appkasir;
 
 import org.junit.Test;
 

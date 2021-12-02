@@ -2,16 +2,15 @@ package com.ppb.appkasir.Fragment;
 import android.support.v4.app.*;
 import android.os.*;
 import android.view.*;
-import com.ppb.appkasir.*;
-import com.ppb.appkasir.Adapter.*;
-import com.agusibrahim.appkasir.R;
+
+import com.ppb.appkasir.R;
 import com.ppb.appkasir.Adapter.BelanjaanDataAdapter;
 
 import android.support.design.widget.*;
 import android.widget.*;
-import com.ppb.appkasir.Widget.*;
+
 import de.codecrafters.tableview.listeners.*;
-import com.ppb.appkasir.Model.*;
+
 import com.ppb.appkasir.MainActivity;
 import com.ppb.appkasir.Model.Belanjaan;
 import com.ppb.appkasir.Widget.EditorDialog;

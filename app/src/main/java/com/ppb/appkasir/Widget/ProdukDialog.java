@@ -3,13 +3,11 @@ import android.content.*;
 import android.support.v7.app.*;
 import android.view.*;
 import android.widget.*;
-import com.ppb.appkasir.Model.*;
 import android.text.*;
 
-import com.ppb.appkasir.*;
 import com.ppb.appkasir.MainActivity;
 import com.ppb.appkasir.Model.Produk;
-import com.agusibrahim.appkasir.R;
+import com.ppb.appkasir.R;
 public class ProdukDialog
 {
 	public ProdukDialog(final Context ctx, final Produk dataset){
