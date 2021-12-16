@@ -11,6 +11,7 @@ import com.ppb.appkasir.Fragment.*;
 import com.ppb.appkasir.Model.Belanjaan;
 import com.ppb.appkasir.Model.Produk;
 
+
 public class BelanjaanDataAdapter extends TableDataAdapter
 {
 	public static final NumberFormat PRICE_FORMATTER = NumberFormat.getNumberInstance();

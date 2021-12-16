@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "574412544364",
+    "project_id": "final-project-ppb-a",
+    "storage_bucket": "final-project-ppb-a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574412544364:android:e7b3d5d3ad5d6db37cbb49",
+        "android_client_info": {
+          "package_name": "com.example.projectkamera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "574412544364-lnoujf84t89gn69noi4d1pccvst3sfki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2TWSlNGSche7g-A0jKAdWg7xuCT1jZm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "574412544364-lnoujf84t89gn69noi4d1pccvst3sfki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574412544364:android:314258a5377c732f7cbb49",
+        "android_client_info": {
+          "package_name": "com.ppb.appkasir"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "574412544364-lnoujf84t89gn69noi4d1pccvst3sfki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2TWSlNGSche7g-A0jKAdWg7xuCT1jZm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "574412544364-lnoujf84t89gn69noi4d1pccvst3sfki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/menu/drawermenu.xml" value="0.4" />
+        <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/menu/inputmodemenu.xml" value="0.11927083333333334" />
+        <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/menu/mainmenu.xml" value="0.11927083333333334" />
+        <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/menu/popupmenu.xml" value="0.11927083333333334" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

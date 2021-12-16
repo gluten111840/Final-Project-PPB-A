@@ -12,5 +12,9 @@
         android:id="@+id/frag3"
         android:title="Laporan"
 		android:icon="@drawable/ic_clipboard_outline"/>
+		<item
+			android:id="@+id/frag4"
+			android:title="History"
+			android:icon="@drawable/ic_clipboard_outline"/>
 	</group>
 </menu>
