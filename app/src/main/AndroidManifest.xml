@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.ppb.appkasir" >
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -20,7 +21,8 @@
         </activity>
         <activity
             android:name="com.ppb.appkasir.Widget.EditorDialog"
-            android:label="tring/title_activity_fragment1" >
+            android:label="tring/title_activity_fragment1"
+            tools:ignore="Instantiatable">
         </activity>
     </application>
 

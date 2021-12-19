@@ -100,8 +100,6 @@ public class MainActivity extends AppCompatActivity
 			case android.R.id.home:
 				mDrawer.openDrawer(GravityCompat.START);
 				return true;
-			
-				
 		}
 		return super.onOptionsItemSelected(item);
 	}
@@ -151,5 +149,4 @@ public class MainActivity extends AppCompatActivity
 		dataBalanjaan.total=0;
 		super.onDestroy();
 	}
-	
 }
