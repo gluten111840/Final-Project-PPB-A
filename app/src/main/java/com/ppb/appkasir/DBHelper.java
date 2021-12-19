@@ -13,7 +13,7 @@ public class DBHelper extends SQLiteOpenHelper
 	}
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		db.execSQL("create table "+namaTable+" (sn TEXT null,nama TEXT null,harga INTEGER null, stok INTEGER null)");
+		db.execSQL("create table "+namaTable+" (id INTEGER primary key autoincrement not null, sn TEXT not NULL, nama TEXT not NULL,harga INTEGER not NULL, stok INTEGER not NULL)");
 	}
 
 	@Override
