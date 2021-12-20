@@ -36,7 +36,12 @@ public class OcrActivity extends AppCompatActivity {
 
             }
         });
-        tutup.setOnClickListener(view -> finish());
+        tutup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     private void dispatchTakePictureIntent(){
