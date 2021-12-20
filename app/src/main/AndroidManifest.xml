@@ -14,7 +14,12 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".OcrActivity"
-            android:exported="true" />
+            android:exported="true">
+            <meta-data
+                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+                android:value="ocr"
+                />
+        </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">

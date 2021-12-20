@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Final-Project-PPB-A.iml" filepath="$PROJECT_DIR$/.idea/modules/Final-Project-PPB-A.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Final-Project-PPB-A.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Final-Project-PPB-A.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/FinalProjectPPBA.iml" filepath="$PROJECT_DIR$/.idea/modules/FinalProjectPPBA.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FinalProjectPPBA.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FinalProjectPPBA.app.iml" />
     </modules>

@@ -35,10 +35,16 @@ dependencies {
     implementation 'com.journeyapps:zxing-android-embedded:3.5.0'
     implementation 'com.lovedise:permissiongen:0.0.6'
     implementation 'androidx.drawerlayout:drawerlayout:1.1.1'
+    //noinspection OutdatedLibrary
     def multidex_version = "2.0.1"
     implementation "androidx.multidex:multidex:$multidex_version"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.google.firebase:firebase-firestore:21.4.0'
+
+    implementation 'com.google.firebase:firebase-core:15.0.2'
+    //noinspection OutdatedLibrary
+    implementation 'com.google.firebase:firebase-ml-vision:15.0.0'
+
 //    implementation 'com.google.firebase:firebase-auth:21.0.1'
     testImplementation 'junit:junit:4.12'
     //noinspection GradleCompatible

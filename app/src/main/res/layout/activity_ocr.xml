@@ -16,7 +16,7 @@
         android:id="@+id/text_display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Display Detected Text From Picture"
+        android:text=""
         android:layout_below="@+id/image_view"
         android:textSize="26dp"
         android:maxLines="5"
