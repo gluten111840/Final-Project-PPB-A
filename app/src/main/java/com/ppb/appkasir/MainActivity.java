@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity
 		return new ActionBarDrawerToggle(this, mDrawer, toolbar, R.string.drawer_buka, R.string.drawer_tutup);
 	}
 	private void Terpilih(MenuItem menu){
-		Class fragclass;
+		Class fragclass=null;
 		Fragment frag = null;
 		switch(menu.getItemId()){
 			case R.id.frag1:
@@ -86,9 +86,9 @@ public class MainActivity extends AppCompatActivity
 				fragclass= riwayatFragment.class;
 				break;
 
-//			case R.id.fragOcr:
-//				bukaocr();
-//				break;
+			case R.id.fragOcr:
+				bukaocr();
+				break;
 			default:
 				fragclass=belanjaFragment.class;
 		}
