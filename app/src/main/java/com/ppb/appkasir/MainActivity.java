@@ -14,6 +14,7 @@ import com.ppb.appkasir.Adapter.BelanjaanDataAdapter;
 import com.ppb.appkasir.Adapter.ProdukDataAdapter;
 import com.ppb.appkasir.Fragment.belanjaFragment;
 import com.ppb.appkasir.Fragment.productFragment;
+import com.ppb.appkasir.Fragment.riwayatFragment;
 import com.ppb.appkasir.Model.Produk;
 import com.ppb.appkasir.R;
 
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity
 		return new ActionBarDrawerToggle(this, mDrawer, toolbar, R.string.drawer_buka, R.string.drawer_tutup);
 	}
 	private void Terpilih(MenuItem menu){
-		Class fragclass;
+		Class fragclass = null;
 		Fragment frag = null;
 		switch(menu.getItemId()){
 			case R.id.frag1:
@@ -79,6 +80,14 @@ public class MainActivity extends AppCompatActivity
 				break;
 			case R.id.frag2:
 				fragclass= productFragment.class;
+				break;
+
+			case R.id.frag3:
+				fragclass= riwayatFragment.class;
+				break;
+
+			case R.id.fragOcr:
+				bukaocr();
 				break;
 			default:
 				fragclass=belanjaFragment.class;
@@ -92,6 +101,11 @@ public class MainActivity extends AppCompatActivity
 		setTitle(menu.getTitle());
 		mDrawer.closeDrawers();
 	}
+	private void bukaocr(){
+		Intent intentku = new Intent(getBaseContext(), OcrActivity.class);
+		startActivityForResult(intentku,0);
+	}
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item)
 	{

@@ -13,8 +13,8 @@
         android:title="Laporan"
 		android:icon="@drawable/ic_clipboard_outline"/>
 		<item
-			android:id="@+id/frag4"
-			android:title="History"
-			android:icon="@drawable/ic_clipboard_outline"/>
+			android:id="@+id/fragOcr"
+			android:title="OCR"
+			android:icon="@android:drawable/ic_menu_camera"/>
 	</group>
 </menu>

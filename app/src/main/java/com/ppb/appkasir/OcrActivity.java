@@ -1,5 +1,6 @@
 package com.ppb.appkasir;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.provider.MediaStore;
@@ -16,7 +17,7 @@ public class OcrActivity extends AppCompatActivity {
     private ImageView imageView;
     private TextView textView;
     static final int REQUEST_IMAGE_CAPTURE = 1;
-
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,7 @@ public class OcrActivity extends AppCompatActivity {
 
         captureImageBtn = (Button) findViewById(R.id.capture_image_btn);
         detectTextBtn = (Button) findViewById(R.id.detect_text_image_btn);
+        Button tutup = (Button) findViewById(R.id.back_aplikasi);
 
         imageView =  findViewById(R.id.image_view);
         textView =  findViewById(R.id.text_display);
@@ -34,6 +36,7 @@ public class OcrActivity extends AppCompatActivity {
 
             }
         });
+        tutup.setOnClickListener(view -> finish());
     }
 
     private void dispatchTakePictureIntent(){

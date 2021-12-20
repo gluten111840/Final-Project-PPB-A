@@ -3,7 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/layout/activity_ocr.xml" value="0.152" />
+        <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/layout/activity_ocr.xml" value="0.264" />
         <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/layout/belanja.xml" value="0.1" />
         <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/layout/editproduk.xml" value="0.12291666666666666" />
         <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/layout/inputproduk_scanner.xml" value="0.12291666666666666" />
@@ -13,7 +14,7 @@
         <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/layout/toolbar.xml" value="0.12291666666666666" />
         <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/layout/totalsheets.xml" value="0.12291666666666666" />
         <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/menu-v21/drawermenu.xml" value="0.11927083333333334" />
-        <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/menu/drawermenu.xml" value="0.4" />
+        <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/menu/drawermenu.xml" value="0.152" />
         <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/menu/inputmodemenu.xml" value="0.11927083333333334" />
         <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/menu/mainmenu.xml" value="0.11927083333333334" />
         <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/menu/popupmenu.xml" value="0.11927083333333334" />
