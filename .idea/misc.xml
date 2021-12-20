@@ -3,7 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/PPB/PPB A/FinalProjectPPBA/app/src/main/res/layout/activity_main.xml" value="0.19791666666666666" />
+        <entry key="..\:/PPB/PPB A/FinalProjectPPBA/app/src/main/res/layout/belanja.xml" value="0.18958333333333333" />
+        <entry key="..\:/PPB/PPB A/FinalProjectPPBA/app/src/main/res/layout/editproduk.xml" value="0.18958333333333333" />
+        <entry key="..\:/PPB/PPB A/FinalProjectPPBA/app/src/main/res/layout/inputproduk_scanner.xml" value="0.18958333333333333" />
+        <entry key="..\:/PPB/PPB A/FinalProjectPPBA/app/src/main/res/layout/myproduct.xml" value="0.18958333333333333" />
+        <entry key="..\:/PPB/PPB A/FinalProjectPPBA/app/src/main/res/layout/produkdlg.xml" value="0.18958333333333333" />
+        <entry key="..\:/PPB/PPB A/FinalProjectPPBA/app/src/main/res/layout/shopingscanner.xml" value="0.18958333333333333" />
+        <entry key="..\:/PPB/PPB A/FinalProjectPPBA/app/src/main/res/layout/toolbar.xml" value="0.18958333333333333" />
+        <entry key="..\:/PPB/PPB A/FinalProjectPPBA/app/src/main/res/layout/totalsheets.xml" value="0.18958333333333333" />
+        <entry key="..\:/PPB/PPB A/FinalProjectPPBA/app/src/main/res/menu/drawermenu.xml" value="0.18958333333333333" />
+        <entry key="..\:/PPB/PPB A/FinalProjectPPBA/app/src/main/res/menu/inputmodemenu.xml" value="0.18958333333333333" />
+        <entry key="..\:/PPB/PPB A/FinalProjectPPBA/app/src/main/res/menu/mainmenu.xml" value="0.18958333333333333" />
+        <entry key="..\:/PPB/PPB A/FinalProjectPPBA/app/src/main/res/menu/popupmenu.xml" value="0.18958333333333333" />
+        <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/layout/activity_ocr.xml" value="0.264" />
         <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/layout/belanja.xml" value="0.1" />
         <entry key="..\:/Users/arier/AndroidStudioProjects/Final-Project-PPB-A/app/src/main/res/layout/editproduk.xml" value="0.12291666666666666" />

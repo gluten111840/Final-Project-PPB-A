@@ -7,8 +7,10 @@ import android.view.inputmethod.*;
 import java.util.*;
 import com.google.zxing.*;
 import android.text.*;
-import android.support.v7.app.AlertDialog;
+//import android.support.v7.app.AlertDialog;
 import android.os.*;
+
+import androidx.appcompat.app.AlertDialog;
 
 import com.ppb.appkasir.Adapter.BelanjaanDataAdapter;
 import com.ppb.appkasir.Fragment.belanjaFragment;

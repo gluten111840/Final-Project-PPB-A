@@ -2,23 +2,28 @@ package com.ppb.appkasir.Fragment;
 
 import android.os.*;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.ppb.appkasir.Adapter.ProdukDataAdapter;
 import com.ppb.appkasir.Model.Produk;
 
 import de.codecrafters.tableview.listeners.*;
 import android.widget.*;
 import android.view.*;
-import android.support.v4.app.Fragment;
+//import android.support.v4.app.Fragment;
+
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.fragment.app.Fragment;
 
 import com.ppb.appkasir.MainActivity;
-import android.support.design.widget.*;
+//import android.support.design.widget.*;
 import com.kennyc.bottomsheet.*;
 import com.ppb.appkasir.R;
 import com.ppb.appkasir.TableGue;
 import com.ppb.appkasir.Widget.ProdukDialog;
 import com.ppb.appkasir.Widget.inputProdukScanner;
 
-public class productFragment extends Fragment 
+public class productFragment extends Fragment
 {
 	FloatingActionButton fab_addbtn;
 	CoordinatorLayout mycoor;

@@ -1,9 +1,11 @@
 package com.ppb.appkasir.Widget;
 import android.content.*;
-import android.support.v7.app.*;
+//import android.support.v7.app.*;
 import android.view.*;
 import android.widget.*;
 import android.text.*;
+
+import androidx.appcompat.app.AlertDialog;
 
 import com.ppb.appkasir.MainActivity;
 import com.ppb.appkasir.Model.Produk;

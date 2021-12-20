@@ -1,27 +1,41 @@
 package com.ppb.appkasir;
-import android.os.*;
-import android.support.v7.app.*;
-import android.support.v4.widget.*;
-import android.support.v7.widget.*;
-import android.support.design.widget.*;
-import android.view.*;
-import android.support.v4.view.*;
-import android.content.res.*;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 
+import android.Manifest;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.os.Bundle;
+//import android.support.design.widget.*;
+//import android.support.v4.app.Fragment;
+//import android.support.v4.app.FragmentManager;
+//import android.support.v4.view.*;
+//import android.support.v4.widget.*;
+//import android.support.v7.app.*;
+//import android.support.v7.app.AlertDialog;
+//import android.support.v7.widget.*;
+import android.view.Menu;
+import android.view.MenuItem;
+
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
+import com.google.android.material.navigation.NavigationView;
 import com.ppb.appkasir.Adapter.BelanjaanDataAdapter;
 import com.ppb.appkasir.Adapter.ProdukDataAdapter;
 import com.ppb.appkasir.Fragment.belanjaFragment;
 import com.ppb.appkasir.Fragment.productFragment;
 import com.ppb.appkasir.Fragment.riwayatFragment;
 import com.ppb.appkasir.Model.Produk;
-import com.ppb.appkasir.R;
 
-import kr.co.namee.permissiongen.*;
-import android.*;
-import android.support.v7.app.AlertDialog;
-import android.content.*;
+import kr.co.namee.permissiongen.PermissionFail;
+import kr.co.namee.permissiongen.PermissionGen;
+import kr.co.namee.permissiongen.PermissionSuccess;
 
 public class MainActivity extends AppCompatActivity
 {

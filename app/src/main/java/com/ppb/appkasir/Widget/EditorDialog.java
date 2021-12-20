@@ -2,7 +2,9 @@ package com.ppb.appkasir.Widget;
 import android.content.*;
 import android.view.*;
 import android.widget.*;
-import android.support.v7.app.*;
+//import android.support.v7.app.*;
+import androidx.appcompat.app.AlertDialog;
+
 import com.ppb.appkasir.R;
 import com.ppb.appkasir.Adapter.BelanjaanDataAdapter;
 import com.ppb.appkasir.MainActivity;
