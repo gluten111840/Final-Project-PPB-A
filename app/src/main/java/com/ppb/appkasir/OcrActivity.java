@@ -33,7 +33,7 @@ public class OcrActivity extends AppCompatActivity {
         captureImageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                dispatchTakePictureIntent();
             }
         });
         tutup.setOnClickListener(new View.OnClickListener() {
