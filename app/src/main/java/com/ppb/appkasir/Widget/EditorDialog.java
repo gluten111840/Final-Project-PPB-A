@@ -28,7 +28,7 @@ public class EditorDialog
 					totalbelanja.setText("Rp. "+ BelanjaanDataAdapter.PRICE_FORMATTER.format(BelanjaanDataAdapter.total));
 				}
 			});
-		dlg.setNeutralButton("Hapus Belanjaan", null);
+		dlg.setNeutralButton("Batal", null);
 		dlg.show();
 		totalview.setText("Rp. "+BelanjaanDataAdapter.PRICE_FORMATTER.format(harga*val));
 		hargaview.setText("Rp. "+BelanjaanDataAdapter.PRICE_FORMATTER.format(harga));

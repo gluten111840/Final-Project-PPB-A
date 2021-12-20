@@ -147,6 +147,7 @@ public class MainActivity extends AppCompatActivity
 	protected void onDestroy() {
 		
 		dataBalanjaan.total=0;
+
 		super.onDestroy();
 	}
 }
