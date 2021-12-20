@@ -31,7 +31,7 @@ public class OcrActivity extends AppCompatActivity {
     private Button captureImageBtn, detectTextBtn;
     private ImageView imageView;
     private TextView textView;
-    Bitmap imageBitmap;
+    private Bitmap imageBitmap;
     static final int REQUEST_IMAGE_CAPTURE = 1;
     @SuppressLint("SetJavaScriptEnabled")
     @Override
@@ -104,6 +104,7 @@ public class OcrActivity extends AppCompatActivity {
         List<FirebaseVisionText.Block> blockList = firebaseVisionText.getBlocks();
         if(blockList.size() == 0){
             Toast.makeText(this, "No Text Found in image", Toast.LENGTH_SHORT);
+            return;
         }
         else{
             for(FirebaseVisionText.Block block: firebaseVisionText.getBlocks()){
