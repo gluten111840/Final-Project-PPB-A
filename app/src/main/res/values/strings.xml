@@ -5,4 +5,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="drawer_buka">Buka</string>
     <string name="drawer_tutup">Tutup</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="web_client_id">574412544364-lnoujf84t89gn69noi4d1pccvst3sfki.apps.googleusercontent.com</string>
 </resources>

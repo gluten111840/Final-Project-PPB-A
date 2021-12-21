@@ -43,6 +43,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "574412544364-68vcd978sa3l1e4le3qs8j5p0s2vum9c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ppb.appkasir",
+            "certificate_hash": "1ce8304ae2d487c93747d51dd14ab36a7a8fa347"
+          }
+        },
+        {
           "client_id": "574412544364-lnoujf84t89gn69noi4d1pccvst3sfki.apps.googleusercontent.com",
           "client_type": 3
         }

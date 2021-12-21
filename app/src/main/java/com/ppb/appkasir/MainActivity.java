@@ -169,6 +169,7 @@ public class MainActivity extends AppCompatActivity
 	}
 	@Override public void onRequestPermissionsResult(int requestCode, String[] permissions,
 													 int[] grantResults) {
+		super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 		PermissionGen.onRequestPermissionsResult(this, requestCode, permissions, grantResults);
 	}
 	@Override
