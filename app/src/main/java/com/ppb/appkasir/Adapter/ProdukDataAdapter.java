@@ -53,7 +53,7 @@ public class ProdukDataAdapter extends TableDataAdapter
 	public void tambah(ContentValues val){
 
 		getData().add(new Produk(val.getAsString("nama"), val.getAsString("sn"), val.getAsLong("harga"), val.getAsInteger("stok")));
-//		new DBHelper(getContext()).tambah(val);
+		new DBHelper(getContext()).tambah(val);
 
 		notifyDataSetChanged();
 	}
