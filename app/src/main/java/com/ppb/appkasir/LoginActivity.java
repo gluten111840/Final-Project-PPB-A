@@ -3,8 +3,12 @@ package com.ppb.appkasir;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -40,13 +44,27 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     String idToken;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
+    private FirebaseAuth mAuth;
 
+    private TextView emailTextView, passwordTextView;
+    private Button Btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        mAuth = FirebaseAuth.getInstance();
         firebaseAuth = com.google.firebase.auth.FirebaseAuth.getInstance();
+        emailTextView = findViewById(R.id.editTextEmail);
+        passwordTextView = findViewById(R.id.editTextPassword);
+        Btn = findViewById(R.id.cirLoginButton);
+        Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                loginUserAccount();
+            }
+        });
+
         //this is where we start the Auth state Listener to listen for whether the user is signed in or not
         authStateListener = new FirebaseAuth.AuthStateListener(){
             @Override
@@ -86,6 +104,64 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             }
         });
     }
+
+    private void loginUserAccount() {
+        String email, password;
+        email = emailTextView.getText().toString();
+        password = passwordTextView.getText().toString();
+        if (TextUtils.isEmpty(email)) {
+            Toast.makeText(getApplicationContext(),
+                    "Please enter email!!",
+                    Toast.LENGTH_LONG)
+                    .show();
+            return;
+        }
+
+        if (TextUtils.isEmpty(password)) {
+            Toast.makeText(getApplicationContext(),
+                    "Please enter password!!",
+                    Toast.LENGTH_LONG)
+                    .show();
+            return;
+        }
+
+        // signin existing user
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(
+                        new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(
+                                    @NonNull Task<AuthResult> task)
+                            {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(getApplicationContext(),
+                                            "Login successful!!",
+                                            Toast.LENGTH_LONG)
+                                            .show();
+
+
+
+                                    // if sign-in is successful
+                                    // intent to home activity
+                                    Intent intent
+                                            = new Intent(LoginActivity.this,
+                                            MainActivity.class);
+                                    startActivity(intent);
+                                }
+
+                                else {
+
+                                    // sign-in failed
+                                    Toast.makeText(getApplicationContext(),
+                                            "Login failed!!",
+                                            Toast.LENGTH_LONG)
+                                            .show();
+
+                                }
+                            }
+                        });
+    }
+
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
