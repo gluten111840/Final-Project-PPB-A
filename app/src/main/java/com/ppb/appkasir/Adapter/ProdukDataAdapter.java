@@ -3,12 +3,19 @@ import de.codecrafters.tableview.*;
 import android.view.*;
 import java.util.*;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.ppb.appkasir.MainActivity;
 import com.ppb.appkasir.Model.*;
 import android.content.*;
 import android.widget.*;
+
+import androidx.annotation.NonNull;
+
 import java.text.*;
 
 import com.ppb.appkasir.DBHelper;
@@ -51,9 +58,26 @@ public class ProdukDataAdapter extends TableDataAdapter
 		return pos;
 	}
 	public void tambah(ContentValues val){
-
+		Produk product = new Produk(val.getAsString("nama"), val.getAsString("sn"), val.getAsLong("harga"), val.getAsInteger("stok"));
+		String sn = val.getAsString("sn");
 		getData().add(new Produk(val.getAsString("nama"), val.getAsString("sn"), val.getAsLong("harga"), val.getAsInteger("stok")));
 		new DBHelper(getContext()).tambah(val);
+		firebaseDatabase = FirebaseDatabase.getInstance();
+		// on below line creating our database reference.
+		databaseReference = firebaseDatabase.getReference("Produk");
+		databaseReference.addValueEventListener(new ValueEventListener() {
+			@Override
+			public void onDataChange(@NonNull DataSnapshot snapshot) {
+				// on below line we are setting data in our firebase database.
+				databaseReference.child(sn).setValue(product);
+
+			}
+
+			@Override
+			public void onCancelled(@NonNull DatabaseError error) {
+				// displaying a failure message on below line.
+			}
+		});
 
 		notifyDataSetChanged();
 	}
