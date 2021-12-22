@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity
 	Toolbar toolbar;
 	public static ProdukDataAdapter dataproduk;
 	public static BelanjaanDataAdapter dataBalanjaan;
-	public static LoginActivity buatlogout;
+//	public static LoginActivity buatlogout;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity
 		reqPerms();
 		dataproduk=new ProdukDataAdapter(this, Produk.getInit(this));
 		dataBalanjaan=new BelanjaanDataAdapter(this);
-		buatlogout = new LoginActivity();
+//		buatlogout = new LoginActivity();
     }
 	
 	private void reqPerms(){
