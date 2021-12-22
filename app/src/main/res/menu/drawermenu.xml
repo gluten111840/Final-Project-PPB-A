@@ -16,5 +16,10 @@
 			android:id="@+id/fragOcr"
 			android:title="OCR"
 			android:icon="@android:drawable/ic_menu_camera"/>
+		<item
+			android:id="@+id/fragLogout"
+			android:title="Profile"
+			android:icon="@drawable/ic_baseline_person"/>
+
 	</group>
 </menu>

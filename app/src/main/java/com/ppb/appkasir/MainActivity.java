@@ -26,6 +26,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.ppb.appkasir.Adapter.BelanjaanDataAdapter;
 import com.ppb.appkasir.Adapter.ProdukDataAdapter;
 import com.ppb.appkasir.Fragment.belanjaFragment;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity
 	Toolbar toolbar;
 	public static ProdukDataAdapter dataproduk;
 	public static BelanjaanDataAdapter dataBalanjaan;
+	public static LoginActivity buatlogout;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -62,6 +64,7 @@ public class MainActivity extends AppCompatActivity
 		reqPerms();
 		dataproduk=new ProdukDataAdapter(this, Produk.getInit(this));
 		dataBalanjaan=new BelanjaanDataAdapter(this);
+		buatlogout = new LoginActivity();
     }
 	
 	private void reqPerms(){
@@ -103,6 +106,10 @@ public class MainActivity extends AppCompatActivity
 			case R.id.fragOcr:
 				bukaocr();
 				break;
+
+			case R.id.fragLogout:
+				profile();
+				break;
 			default:
 				fragclass=belanjaFragment.class;
 		}
@@ -117,6 +124,12 @@ public class MainActivity extends AppCompatActivity
 	}
 	private void bukaocr(){
 		Intent intentku = new Intent(getBaseContext(), OcrActivity.class);
+		startActivityForResult(intentku,0);
+	}
+
+	private void profile() {
+//		new LogoutDialog(LogoutDialog.getCtx()).logout_dialog();
+		Intent intentku = new Intent(getBaseContext(), ProfileActivity.class);
 		startActivityForResult(intentku,0);
 	}
 

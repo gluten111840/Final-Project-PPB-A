@@ -2,6 +2,10 @@ package com.ppb.appkasir.Adapter;
 import de.codecrafters.tableview.*;
 import android.view.*;
 import java.util.*;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.ppb.appkasir.Model.*;
 import android.content.*;
 import android.widget.*;
@@ -12,6 +16,8 @@ import com.ppb.appkasir.Model.Produk;
 
 public class ProdukDataAdapter extends TableDataAdapter
 {
+	FirebaseDatabase firebaseDatabase;
+	DatabaseReference databaseReference;
 	public static final NumberFormat PRICE_FORMATTER = NumberFormat.getNumberInstance();
 	public ProdukDataAdapter(Context ctx, ArrayList<Produk> prod){
 		super(ctx, prod);
@@ -45,8 +51,10 @@ public class ProdukDataAdapter extends TableDataAdapter
 		return pos;
 	}
 	public void tambah(ContentValues val){
+
 		getData().add(new Produk(val.getAsString("nama"), val.getAsString("sn"), val.getAsLong("harga"), val.getAsInteger("stok")));
-		new DBHelper(getContext()).tambah(val);
+//		new DBHelper(getContext()).tambah(val);
+
 		notifyDataSetChanged();
 	}
 	public void hapus(Produk produk){

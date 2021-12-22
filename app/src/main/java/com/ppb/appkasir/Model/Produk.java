@@ -5,8 +5,10 @@ import android.database.*;
 import com.ppb.appkasir.DBHelper;
 
 import android.content.*;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class Produk
+public class Produk implements Parcelable
 {
 	protected String nama;
 	protected String sn;
@@ -74,5 +76,15 @@ public class Produk
 			prod.add(new Produk(nama, sn, harga, stok));
 		}
 		return prod;
+	}
+
+	@Override
+	public int describeContents() {
+		return 0;
+	}
+
+	@Override
+	public void writeToParcel(Parcel dest, int flags) {
+
 	}
 }

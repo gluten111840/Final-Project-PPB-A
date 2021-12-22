@@ -13,13 +13,13 @@
 		android:layout_gravity="center_horizontal">
 
 		<TextView
-			android:layout_height="wrap_content"
-			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="wrap_content"
-			android:text="Rp. 3000"
-			android:textStyle="bold"
 			android:id="@+id/hargaview"
-			android:layout_centerVertical="true"/>
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:text="Rp. 3000"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:textStyle="bold" />
 
 		<TextView
 			android:layout_height="wrap_content"

@@ -7,12 +7,20 @@ import android.text.*;
 
 import androidx.appcompat.app.AlertDialog;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.ppb.appkasir.MainActivity;
 import com.ppb.appkasir.Model.Produk;
 import com.ppb.appkasir.R;
 public class ProdukDialog
 {
+	private String produkID;
+	FirebaseDatabase firebaseDatabase;
+	DatabaseReference databaseReference;
 	public ProdukDialog(final Context ctx, final Produk dataset){
+		firebaseDatabase = FirebaseDatabase.getInstance();
+		// on below line creating our database reference.
+		databaseReference = firebaseDatabase.getReference("Produk");
 		String positiveTxt="Tambahkan";
 		AlertDialog.Builder dlg=new AlertDialog.Builder(ctx);
 		View form=LayoutInflater.from(ctx).inflate(R.layout.produkdlg, null);
@@ -41,9 +49,16 @@ public class ProdukDialog
 					data.put("sn", kodeprod.getText().toString());
 					data.put("harga", Long.parseLong(harga.getText().toString()));
 					data.put("stok", Integer.parseInt(stok.getText().toString()));
+
+					String s_nama = nama.getText().toString();
+					String s_sn = kodeprod.getText().toString();
+					long s_harga = Long.parseLong(harga.getText().toString());
+					int s_stok = Integer.parseInt(stok.getText().toString());
+					produkID = s_sn;
 					// Jika mode penambahan
 					if(dataset==null){
 						MainActivity.dataproduk.tambah(data);
+
 					// Jika mode EDIT
 					}else{
 						MainActivity.dataproduk.perbarui(dataset, data);

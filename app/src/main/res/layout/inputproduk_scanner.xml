@@ -57,13 +57,13 @@
 			android:id="@+id/selesaibtn"/>
 
 		<Button
+			android:id="@+id/tambhakanbtn"
 			style="?android:attr/buttonBarButtonStyle"
-			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:text="Tambahkan"
+			android:layout_height="wrap_content"
 			android:layout_alignParentRight="true"
 			android:layout_toRightOf="@id/selesaibtn"
-			android:id="@+id/tambhakanbtn"/>
+			android:text="Tambahkan" />
 
 	</RelativeLayout>
 
