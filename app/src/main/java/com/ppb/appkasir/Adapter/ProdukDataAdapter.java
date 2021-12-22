@@ -75,7 +75,7 @@ public class ProdukDataAdapter extends TableDataAdapter
 
 			@Override
 			public void onCancelled(@NonNull DatabaseError error) {
-				// displaying a failure message on below line.
+				// TODO
 			}
 		});
 
@@ -83,10 +83,17 @@ public class ProdukDataAdapter extends TableDataAdapter
 	}
 	public void hapus(Produk produk){
 		getData().remove(produk);
+		String sn = produk.getSn();
+		firebaseDatabase = FirebaseDatabase.getInstance();
+		// on below line we are initialing our database reference and we are adding a child as our course id.
+		databaseReference = firebaseDatabase.getReference("Produk").child(sn);
+		// on below line calling a method to delete the course.
+		databaseReference.removeValue();
 		new DBHelper(getContext()).delete(produk.getSn());
 		notifyDataSetChanged();
 	}
 	public void perbarui(Produk produk, ContentValues newdata){
+		Produk product = new Produk(newdata.getAsString("nama"), newdata.getAsString("sn"), newdata.getAsLong("harga"), newdata.getAsInteger("stok"));
 		int idx=getpos(produk);//getData().indexOf(produk);
 		if(idx>=0){
 			
