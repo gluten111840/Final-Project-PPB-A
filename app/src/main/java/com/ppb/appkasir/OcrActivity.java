@@ -57,7 +57,9 @@ public class OcrActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intentku = new Intent(getBaseContext(), MainActivity.class);
+                finish();
                 startActivityForResult(intentku,0);
+
             }
         });
         detectTextBtn.setOnClickListener(new View.OnClickListener() {

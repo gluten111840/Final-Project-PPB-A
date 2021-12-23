@@ -20,6 +20,9 @@
 			android:id="@+id/fragLogout"
 			android:title="Profile"
 			android:icon="@drawable/ic_baseline_person"/>
-
+		<item
+			android:id="@+id/logout"
+			android:title="Logout"
+			android:icon="@drawable/ic_baseline_exit_to_app"/>
 	</group>
 </menu>

@@ -71,13 +71,15 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 // Get signedIn user
                 FirebaseUser user = firebaseAuth.getCurrentUser();
+                FirebaseUser userEmail = mAuth.getCurrentUser();
 
                 //if user is signed in, we call a helper method to save the user details to Firebase
-                if (user != null) {
+                if (user != null || userEmail != null) {
                     // User is signed in
                     // you could place other firebase code
                     //logic to save the user details to Firebase
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                    Log.d(TAG, "onAuthStateChanged:signed_in:" + userEmail.getUid());
                 } else {
                     // User is signed out
                     Log.d(TAG, "onAuthStateChanged:signed_out");
@@ -226,8 +228,10 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         super.onStart();
         if (authStateListener != null){
             FirebaseAuth.getInstance().signOut();
+            mAuth.getInstance().signOut();
         }
         firebaseAuth.addAuthStateListener(authStateListener);
+        mAuth.addAuthStateListener(authStateListener);
     }
 
     @Override
@@ -235,12 +239,12 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         super.onStop();
         if (authStateListener != null){
             firebaseAuth.removeAuthStateListener(authStateListener);
+            mAuth.removeAuthStateListener(authStateListener);
         }
     }
 
     public void onLoginClick(View View){
         startActivity(new Intent(this,RegisterActivity.class));
         overridePendingTransition(R.anim.slide_in_right,R.anim.stay);
-
     }
 }

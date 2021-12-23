@@ -110,6 +110,11 @@ public class MainActivity extends AppCompatActivity
 			case R.id.fragLogout:
 				profile();
 				break;
+
+			case R.id.logout:
+				logout();
+				break;
+
 			default:
 				fragclass=belanjaFragment.class;
 		}
@@ -122,6 +127,13 @@ public class MainActivity extends AppCompatActivity
 		setTitle(menu.getTitle());
 		mDrawer.closeDrawers();
 	}
+
+	private void logout() {
+		Intent intentku = new Intent(getBaseContext(), LoginActivity.class);
+		FirebaseAuth.getInstance().signOut();
+		startActivityForResult(intentku,0);
+	}
+
 	private void bukaocr(){
 		Intent intentku = new Intent(getBaseContext(), OcrActivity.class);
 		startActivityForResult(intentku,0);
