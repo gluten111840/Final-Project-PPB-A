@@ -36,8 +36,6 @@ import com.ppb.appkasir.Model.Produk;
 
 public class ProdukDataAdapter extends TableDataAdapter
 {
-//	FirebaseDatabase firebaseDatabase;
-//	DatabaseReference databaseReference;
 	FirebaseFirestore myDB;
 	List<String> list = new ArrayList<>();
 	public static final NumberFormat PRICE_FORMATTER = NumberFormat.getNumberInstance();
@@ -58,7 +56,6 @@ public class ProdukDataAdapter extends TableDataAdapter
 				list.clear();
 				for(DocumentSnapshot doc : queryDocumentSnapshots) {
 					list.add(doc.getString("nama"));
-//					list.add(doc.getString("sn"));
 					list.add(doc.getLong("harga").toString());
 					list.add(String.valueOf(doc.get("stok")));
 				}
@@ -95,7 +92,6 @@ public class ProdukDataAdapter extends TableDataAdapter
 		return pos;
 	}
 	public void tambah(ContentValues val){
-//		Produk product = new Produk(val.getAsString("nama"), val.getAsString("sn"), val.getAsLong("harga"), val.getAsInteger("stok"));
 		String sn = val.getAsString("sn");
 		getData().add(new Produk(val.getAsString("nama"), val.getAsString("sn"), val.getAsLong("harga"), val.getAsInteger("stok")));
 		Map<String, Object> data = new HashMap<>();
@@ -108,76 +104,33 @@ public class ProdukDataAdapter extends TableDataAdapter
 		myDB.collection("Produk")
 				.document(sn)
 				.set(data);
-//		firebaseDatabase = FirebaseDatabase.getInstance();
-//		// on below line creating our database reference.
-//		databaseReference = firebaseDatabase.getReference("Produk");
-//		databaseReference.addValueEventListener(new ValueEventListener() {
-//			@Override
-//			public void onDataChange(@NonNull DataSnapshot snapshot) {
-//				// on below line we are setting data in our firebase database.
-//				databaseReference.child(sn).setValue(product);
-//
-//			}
-//
-//			@Override
-//			public void onCancelled(@NonNull DatabaseError error) {
-//				// TODO
-//			}
-//		});
 
 		notifyDataSetChanged();
 	}
 	public void hapus(Produk produk){
 		getData().remove(produk);
-//		String sn = produk.getSn();
 		new DBHelper(getContext()).delete(produk.getSn());
 		myDB = FirebaseFirestore.getInstance();
 		myDB.collection("Produk").document(produk.getSn()).delete()
 				.addOnSuccessListener(new OnSuccessListener<Void>() {
 					@Override
 					public void onSuccess(Void aVoid) {
-//						toastResult("Data deleted successfully");
 					}
 				})
 				.addOnFailureListener(new OnFailureListener() {
 					@Override
 					public void onFailure(@NonNull Exception e) {
-//						toastResult("Error while deleting the data : " + e.getMessage());
 					}
 				});
-//		firebaseDatabase = FirebaseDatabase.getInstance();
-//		// on below line we are initialing our database reference and we are adding a child as our course id.
-//		databaseReference = firebaseDatabase.getReference("Produk").child(sn);
-//		// on below line calling a method to delete the course.
-//		databaseReference.removeValue();
 		notifyDataSetChanged();
 	}
 	public void perbarui(Produk produk, ContentValues newdata){
-//		String sn = produk.getSn();
-//		firebaseDatabase = FirebaseDatabase.getInstance();
-//		databaseReference = firebaseDatabase.getReference("Produk").child(sn);
 		int idx=getpos(produk);//getData().indexOf(produk);
 		if(idx>=0){
 			
 		}else{
 			return;
 		}
-//		Map<String, Object> map = new HashMap<>();
-//		map.put("harga", produk.getHarga());
-//		map.put("nama", produk.getNama());
-//		map.put("sn", produk.getSn());
-//		map.put("stok", produk.getStok());
-//		databaseReference.addValueEventListener(new ValueEventListener() {
-//			@Override
-//			public void onDataChange(@NonNull DataSnapshot snapshot) {
-//				// adding a map to our database.
-//				databaseReference.updateChildren(map);
-//			}
-//
-//			@Override
-//			public void onCancelled(@NonNull DatabaseError error) {
-//			}
-//		});
 		getData().set(idx, new Produk(newdata.getAsString("nama"), newdata.getAsString("sn"), newdata.getAsLong("harga"), newdata.getAsInteger("stok")));
 		new DBHelper(getContext()).update(newdata, produk.getSn());
 		myDB = FirebaseFirestore.getInstance();
