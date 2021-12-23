@@ -64,19 +64,19 @@ public class RegisterActivity extends AppCompatActivity {
         password = passwordTextView.getText().toString();
 
         if(TextUtils.isEmpty(email)){
-            Toast.makeText(getApplicationContext(), "Plear enter email!!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Please enter your email!", Toast.LENGTH_LONG).show();
             return;
         }
         if(TextUtils.isEmpty(name)){
-            Toast.makeText(getApplicationContext(), "Plear enter name!!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Please enter name!", Toast.LENGTH_LONG).show();
             return;
         }
         if(TextUtils.isEmpty(nomor)){
-            Toast.makeText(getApplicationContext(), "Plear enter nomor!!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Please enter nomor!", Toast.LENGTH_LONG).show();
             return;
         }
         if(TextUtils.isEmpty(password)){
-            Toast.makeText(getApplicationContext(), "Plear enter password!!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Please enter password!", Toast.LENGTH_LONG).show();
             return;
         }
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {

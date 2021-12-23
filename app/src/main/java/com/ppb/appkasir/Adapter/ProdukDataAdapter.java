@@ -1,5 +1,7 @@
 package com.ppb.appkasir.Adapter;
 import de.codecrafters.tableview.*;
+
+import android.os.Build;
 import android.view.*;
 import java.util.*;
 
@@ -13,13 +15,19 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.ppb.appkasir.MainActivity;
 import com.ppb.appkasir.Model.*;
 import android.content.*;
 import android.widget.*;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 import java.text.*;
 
@@ -31,27 +39,50 @@ public class ProdukDataAdapter extends TableDataAdapter
 //	FirebaseDatabase firebaseDatabase;
 //	DatabaseReference databaseReference;
 	FirebaseFirestore myDB;
+	List<String> list = new ArrayList<>();
 	public static final NumberFormat PRICE_FORMATTER = NumberFormat.getNumberInstance();
 	public ProdukDataAdapter(Context ctx, ArrayList<Produk> prod){
 		super(ctx, prod);
 	}
 	@Override
 	public View getCellView(int row, int column, ViewGroup p3) {
+
 		Produk produk = (Produk) getRowData(row);
 		View render=null;
+
+		myDB = FirebaseFirestore.getInstance();
+		myDB.collection("Produk").addSnapshotListener(new EventListener<QuerySnapshot>() {
+			@RequiresApi(api = Build.VERSION_CODES.N)
+			@Override
+			public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
+				list.clear();
+				for(DocumentSnapshot doc : queryDocumentSnapshots) {
+					list.add(doc.getString("nama"));
+//					list.add(doc.getString("sn"));
+					list.add(doc.getLong("harga").toString());
+					list.add(String.valueOf(doc.get("stok")));
+				}
+				for(int i=0;i< list.size();i++) {
+					System.out.println(i +" adalah " + list.get(i));
+				}
+			}
+		});
+
 		switch(column){
 			case 0:
-				render=renderString(produk.getNama());
+				render = renderString(produk.getNama());
 				break;
 			case 1:
-				render=renderString("Rp. "+PRICE_FORMATTER.format(produk.getHarga()));
+				render = renderString("Rp. " + PRICE_FORMATTER.format(produk.getHarga()));
 				break;
 			case 2:
-				render=renderString(""+produk.getStok());
+				render = renderString("" + produk.getStok());
+
 				break;
 		}
 		return render;
 	}
+
 	private int getpos(Produk p){
 		int pos = -1;
 		for(Object pp:getData()){
